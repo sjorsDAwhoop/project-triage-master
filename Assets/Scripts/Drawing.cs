@@ -28,16 +28,29 @@ public class Drawing : MonoBehaviour
             pixelUV.x *= tex.width;
             pixelUV.y *= tex.height;
 
-            Texture2D newTex = (Texture2D)GameObject.Instantiate(tex);
-            newTex.SetPixels32(tex.GetPixels32());
-      
-           
-              newTex.SetPixel(x, y, Color.red);
-            newTex.Apply();
-            Material newMaterial = new Material(rend.material.shader);
-            newMaterial = rend.material;
-            newMaterial.mainTexture = newTex;
-            rend.material = newMaterial;
+            for (int i = 0; i < Size; i++)
+            {
+                int x = (int)pixelUV.x;
+                int y = (int)pixelUV.y;
+
+                //Increment the X and Y
+                x += i;
+                y += i;
+
+                //Apply
+                tex.SetPixel(x, y, Color.red);
+
+                //De-increment the X and Y
+                x = (int)pixelUV.x;
+                y = (int)pixelUV.y;
+
+                x -= i;
+                y -= i;
+
+                //Apply
+                tex.SetPixel(x, y, Color.red);
+            }
+            tex.Apply();
         }
         Debug.DrawRay(transform.position, markerRange, Color.blue);
     }
