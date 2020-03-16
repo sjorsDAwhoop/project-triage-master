@@ -150,7 +150,8 @@ namespace Valve.VR.InteractionSystem
 			teleportPointerObject = pointerLineRenderer.gameObject;
 
 			int tintColorID = Shader.PropertyToID( "_TintColor" );
-			fullTintAlpha = pointVisibleMaterial.GetColor( tintColorID ).a;
+			//werkt niet in HRD
+			//fullTintAlpha = pointVisibleMaterial.GetColor( tintColorID ).a;
 
 			teleportArc = GetComponent<TeleportArc>();
 			teleportArc.traceLayerMask = traceLayerMask;

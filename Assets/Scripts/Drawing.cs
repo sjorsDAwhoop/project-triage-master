@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Drawing : MonoBehaviour
 {
-    private int Size = 2;
+    private int Size = 10;
     Material mat;
 
     void Start()
@@ -34,21 +34,12 @@ public class Drawing : MonoBehaviour
                 int y = (int)pixelUV.y;
 
                 //Increment the X and Y
-                x += i;
-                y += i;
+                 y += i;
+                 x += i;
 
                 //Apply
                 tex.SetPixel(x, y, Color.red);
 
-                //De-increment the X and Y
-                x = (int)pixelUV.x;
-                y = (int)pixelUV.y;
-
-                x -= i;
-                y -= i;
-
-                //Apply
-                tex.SetPixel(x, y, Color.red);
             }
             tex.Apply();
         }

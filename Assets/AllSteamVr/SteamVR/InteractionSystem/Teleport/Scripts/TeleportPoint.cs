@@ -22,6 +22,7 @@ namespace Valve.VR.InteractionSystem
 		};
 
 		//Public variables
+		
 		public TeleportPointType teleportType = TeleportPointType.MoveToLocation;
 		public string title;
 		public string switchToScene;
@@ -189,8 +190,9 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		public override void SetAlpha( float tintAlpha, float alphaPercent )
 		{
-			tintColor = markerMesh.material.GetColor( tintColorID );
-			tintColor.a = tintAlpha;
+			//TintColor werkt niet in HDR
+			//tintColor = markerMesh.material.GetColor( tintColorID );
+			//tintColor.a = tintAlpha;
 
 			markerMesh.material.SetColor( tintColorID, tintColor );
 			switchSceneIcon.material.SetColor( tintColorID, tintColor );
