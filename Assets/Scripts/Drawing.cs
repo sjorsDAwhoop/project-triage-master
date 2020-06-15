@@ -5,19 +5,15 @@ using UnityEngine;
 public class Drawing : MonoBehaviour
 {
     private int Size = 10;
-    Material mat;
-
-    void Start()
-    {
-        
-    }
+    public GameObject marker;
 
     void Update()
     {
-        
+       
         Vector3 markerRange = transform.TransformDirection(Vector3.forward) ;
 
         RaycastHit hit;
+        //draws pixels on texture with mesh collider
         if (Physics.Raycast(transform.position, markerRange ,out hit, 0.1f))
         {
             Renderer rend = hit.transform.GetComponent<Renderer>();
@@ -28,12 +24,13 @@ public class Drawing : MonoBehaviour
             pixelUV.x *= tex.width;
             pixelUV.y *= tex.height;
 
+            //multiplies pixelsize by 10
             for (int i = 0; i < Size; i++)
             {
                 int x = (int)pixelUV.x;
                 int y = (int)pixelUV.y;
 
-                //Increment the X and Y
+                
                  y += i;
                  x += i;
 
@@ -43,8 +40,9 @@ public class Drawing : MonoBehaviour
             }
             tex.Apply();
         }
+        //shows range for marker
         Debug.DrawRay(transform.position, markerRange, Color.blue);
     }
-
+    
 }
 

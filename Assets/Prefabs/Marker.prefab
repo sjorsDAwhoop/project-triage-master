@@ -13,12 +13,11 @@ GameObject:
   - component: {fileID: 4288384748547433606}
   - component: {fileID: 4288384748547433609}
   - component: {fileID: 4288384748547433603}
+  - component: {fileID: 2123676387226196980}
   - component: {fileID: 4288384748547433602}
   - component: {fileID: 4288384748547433605}
-  - component: {fileID: 8219774778571196274}
-  - component: {fileID: 8637102132473750091}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,6 +149,19 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &2123676387226196980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4288384748547433611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57d06f0a342601342acd10b6c159f0a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marker: {fileID: 0}
 --- !u!54 &4288384748547433602
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -220,31 +232,3 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
---- !u!114 &8219774778571196274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4288384748547433611}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f8436b412b7e5b448068e2217fe088d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8637102132473750091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4288384748547433611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bfe56f460c4aa1478774f5e7e6227e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
-  colouredParts: []
-  painter: {fileID: 0}
-  paintReceiver: {fileID: 0}
