@@ -11,9 +11,10 @@ public class Drawing : MonoBehaviour
     {
        
         Vector3 markerRange = transform.TransformDirection(Vector3.forward) ;
-
         RaycastHit hit;
+
         //draws pixels on texture with mesh collider
+
         if (Physics.Raycast(transform.position, markerRange ,out hit, 0.1f))
         {
             Renderer rend = hit.transform.GetComponent<Renderer>();
@@ -25,6 +26,7 @@ public class Drawing : MonoBehaviour
             pixelUV.y *= tex.height;
 
             //multiplies pixelsize by 10
+
             for (int i = 0; i < Size; i++)
             {
                 int x = (int)pixelUV.x;
