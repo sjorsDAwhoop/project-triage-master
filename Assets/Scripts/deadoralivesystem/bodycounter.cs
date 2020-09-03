@@ -1,32 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class bodycounter : MonoBehaviour
 {
-    public float human1TimeLeft = 10;
-    public bool timerIsRunning = false;
+    private readonly List<UnityTimer> _timers = new List<UnityTimer>();
 
-    private void Start()
+    public void Start()
     {
-        // Starts the timer automatically
-        timerIsRunning = true;
+        _timers.Add(new UnityTimer(5f, () => Debug.Log("Timer one finished.")));
+        _timers.Add(new UnityTimer(1f, () => Debug.Log("Timer two finished.")));
     }
 
-    void Update()
+    public void Update()
     {
-        if (timerIsRunning)
+        if (_timers.Count > 0)
         {
-            if (human1TimeLeft > 0)
+            foreach (var timer in _timers.Where(a => !a.Started))
             {
-                human1TimeLeft -= Time.deltaTime;
+                timer.Start();
             }
-            else
+
+            foreach (var timer in _timers.Where(a => a.Finished))
             {
-                Debug.Log("Time has run out!");
-                human1TimeLeft = 0;
-                timerIsRunning = false;
+                timer.Dispose();
             }
+            _timers.RemoveAll(a => a.Finished);
         }
     }
 
