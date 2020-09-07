@@ -4,12 +4,12 @@ using UnityEngine;
 using System.Timers;
 using System;
 
-public class UnityTimer : IDisposable
+public class DeathTimer : IDisposable
 {
     public bool Finished = false;
     public bool Started = false;
     private readonly Timer _timer;
-    public UnityTimer(float time, Action actionToBeExecuted)
+    public DeathTimer(float time, Action actionToBeExecuted)
     {
         _timer = new Timer
         {
