@@ -8,7 +8,7 @@ public class DeathTimer : IDisposable
 {
     public bool Finished = false;
     public bool Started = false;
-    private readonly Timer _timer;
+    public  Timer _timer;
     public DeathTimer(float time, Action actionToBeExecuted)
     {
         _timer = new Timer
