@@ -17,7 +17,7 @@ public class bodycounter : MonoBehaviour
         _timeleft.Add(10f);
 
 
-        _timers.Add(new DeathTimer(_timeleft[0], () =>  ));
+        //_timers.Add(new DeathTimer(_timeleft[0], () =>  ));
         _timers.Add(new DeathTimer(_timeleft[1], () => Debug.Log("Timer two finished.")));
         _timers.Add(new DeathTimer(_timeleft[2], () => Debug.Log("Timer three finished")));
 
