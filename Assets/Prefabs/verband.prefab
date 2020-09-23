@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5491133414226721010}
   - component: {fileID: 9067388650314592791}
   - component: {fileID: -4439562084012699129}
+  - component: {fileID: 247808050981071319}
   m_Layer: 0
   m_Name: verband
   m_TagString: verband
@@ -206,3 +207,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
+--- !u!65 &247808050981071319
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760864324486179393}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05217476, y: 0.024461312, z: 0.10541587}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -2,27 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+public class test : MonoBehaviour
 {
-    public GameObject char1;
-    public GameObject char2;
-    public GameObject char3;
-    public List<int> thing = new List<int>();
+    [SerializeField]
+    private DeathCounter deathCounter;
 
-    public bool that = false;
-    public void DeleteObject()
+    public void OnClick()
     {
-        that = true;
-    }
-
-    
-
-
-    void Update()
-    {
-        if(that == true)
-        {
-            Destroy(char1);
-        }
+        deathCounter.AddTime(5f);
     }
 }
