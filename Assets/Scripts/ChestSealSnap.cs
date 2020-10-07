@@ -8,7 +8,11 @@ public class ChestSealSnap : MonoBehaviour
     [SerializeField]
     private DeathCounter deathCounter;
     [SerializeField]
+    private ScoreSystem score;
+    [SerializeField]
     private float timesafe;
+
+    
     void Start()
     {
         Rend = GetComponent<Renderer>();
@@ -23,6 +27,7 @@ public class ChestSealSnap : MonoBehaviour
             Rend.enabled = true;
             Destroy(col.gameObject);
             deathCounter.AddTime(timesafe);
+            score.AddScore(15);
         }
     }
 

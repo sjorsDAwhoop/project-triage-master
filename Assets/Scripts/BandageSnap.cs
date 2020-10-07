@@ -5,6 +5,12 @@ using UnityEngine;
 public class BandageSnap : MonoBehaviour
 {
     private Renderer Rend;
+    [SerializeField]
+    private DeathCounter deathCounter;
+    [SerializeField]
+    private ScoreSystem score;
+    [SerializeField]
+    private float timesafe;
 
     void Start()
     {
@@ -19,6 +25,8 @@ public class BandageSnap : MonoBehaviour
         {
             Rend.enabled = true;
             Destroy(col.gameObject);
+            deathCounter.AddTime(timesafe);
+            score.AddScore(15);
         } 
     }
     
