@@ -870,6 +870,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8160296957299967398}
+  - component: {fileID: 1949598151744426616}
   m_Layer: 0
   m_Name: mixamorig:Hips
   m_TagString: Untagged
@@ -894,6 +895,20 @@ Transform:
   m_Father: {fileID: 8558493189833713440}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1949598151744426616
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2484904737659994610}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.15437607
+  m_Height: 0.42909876
+  m_Direction: 0
+  m_Center: {x: -0.017262442, y: -0.018017827, z: -0.04956678}
 --- !u!1 &2828512445109599479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1355,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8558493189833713440}
   - component: {fileID: -7602192758508303407}
+  - component: {fileID: 8697959801304256619}
+  - component: {fileID: 6905659237642812916}
   m_Layer: 0
   m_Name: Stroke Shaking Head
   m_TagString: Untagged
@@ -1382,6 +1399,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8697959801304256619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4656363500748510515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b668dec147bc6498d49bcf6569efe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 10
+  handeler: {fileID: 6905659237642812916}
+--- !u!114 &6905659237642812916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4656363500748510515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133f404adb5d76f48980338cb55fd645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4658709009357644118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,10 +1760,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.1069994
-  m_Height: 0.21399876
+  m_Radius: 0.05782252
+  m_Height: 0.11564503
   m_Direction: 2
-  m_Center: {x: -0.00000035624464, y: 0.034465287, z: -0.021044904}
+  m_Center: {x: 0.000000028687788, y: 0.014289733, z: -0.0043082656}
 --- !u!1 &6053436593709607545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2053,10 +2096,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.113222726
-  m_Height: 0.40947315
+  m_Radius: 0.11461299
+  m_Height: 0.44072026
   m_Direction: 1
-  m_Center: {x: 0.006504368, y: 0.29526332, z: -0.0010104335}
+  m_Center: {x: 0.0065045985, y: 0.2796394, z: 0.0003798051}
 --- !u!1 &7905743292803436956
 GameObject:
   m_ObjectHideFlags: 0
