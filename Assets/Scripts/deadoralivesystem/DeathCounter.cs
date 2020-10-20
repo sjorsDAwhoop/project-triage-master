@@ -18,9 +18,15 @@ public class DeathCounter : MonoBehaviour
     private void Update()
     {
         timer -= Time.deltaTime;
+
+        
         if (timer <= 0)
         {
-            handeler.aaaaaaaa();
+            handeler.dead();
+        }
+        if(timer <= 20)
+        {
+            handeler.breathless();
         }
     }
 

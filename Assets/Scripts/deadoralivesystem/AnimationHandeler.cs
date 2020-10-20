@@ -9,9 +9,15 @@ public class AnimationHandeler : MonoBehaviour
     public void Start()
     {
         anim = GetComponent<Animator>();
+        
     }
-    public void aaaaaaaa()
+    public void dead()
+    {
+        anim.Play("Base Layer.dying", 0, 0);
+    }       
+
+    public void breathless()
     {
         anim.Play("Base Layer.breathless", 0, 0);
-    }       
+    }
 }
