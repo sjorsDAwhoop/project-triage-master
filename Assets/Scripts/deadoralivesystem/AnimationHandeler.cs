@@ -13,12 +13,8 @@ public class AnimationHandeler : MonoBehaviour
     }
     public void dead()
     {
-        anim.SetBool("isdead", true);
-    }
-    public void dying()
-    {
-        anim.SetBool("isdying", true);
-    }
+        anim.Play("Base Layer.dying", 0, 0);
+    }       
 
     public void breathless()
     {

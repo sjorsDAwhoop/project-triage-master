@@ -24,11 +24,9 @@ public class DeathCounter : MonoBehaviour
         {
             handeler.dead();
         }
-
-        if(timer <= 20 && timer >= 0)
+        if(timer <= 20)
         {
-            handeler.dying();
-            
+            handeler.breathless();
         }
     }
 
