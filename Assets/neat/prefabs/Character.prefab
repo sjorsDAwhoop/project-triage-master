@@ -1358,7 +1358,7 @@ GameObject:
   - component: {fileID: 8697959801304256619}
   - component: {fileID: 6905659237642812916}
   m_Layer: 0
-  m_Name: Stroke Shaking Head
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
