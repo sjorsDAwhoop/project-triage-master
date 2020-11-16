@@ -19,6 +19,10 @@ public class AnimationHandeler : MonoBehaviour
     {
         anim.SetBool("isdying", true);
     }
+    public void waving()
+    {
+        anim.SetBool("iswaving", true);
+    }
 
     public void breathless()
     {
