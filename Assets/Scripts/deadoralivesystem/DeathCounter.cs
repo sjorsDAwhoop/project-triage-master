@@ -28,7 +28,11 @@ public class DeathCounter : MonoBehaviour
         if(timer <= 20 && timer >= 0)
         {
             handeler.dying();
-            
+        }
+
+        if(timer <= 30 && timer >= 29.5)
+        {
+            handeler.waving();
         }
     }
 

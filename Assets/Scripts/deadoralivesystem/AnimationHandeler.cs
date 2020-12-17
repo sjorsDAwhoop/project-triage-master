@@ -9,7 +9,8 @@ public class AnimationHandeler : MonoBehaviour
     public void Start()
     {
         anim = GetComponent<Animator>();
-        
+        this.GetComponent<Animator>().speed = Random.Range(0.5f, 1.5f);
+
     }
     public void dead()
     {
@@ -21,7 +22,7 @@ public class AnimationHandeler : MonoBehaviour
     }
     public void waving()
     {
-        anim.SetBool("iswaving", true);
+        anim.SetTrigger("ISWAVING");
     }
 
     public void breathless()
