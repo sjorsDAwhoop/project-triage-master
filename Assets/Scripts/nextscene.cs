@@ -8,5 +8,6 @@ public class nextscene : MonoBehaviour
    public void Nextscene()
     {
         SceneManager.LoadScene("New Main Scene");
+        Debug.Log("hi there");
     }
 }

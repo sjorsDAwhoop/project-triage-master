@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.projecttriage.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\PC 4\\Desktop\\project-triage-master\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\PC 1\\Documents\\GitHub\\project-triage-master\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "project triage [Testing]"

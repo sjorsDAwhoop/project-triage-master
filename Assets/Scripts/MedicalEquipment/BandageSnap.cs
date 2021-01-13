@@ -5,6 +5,7 @@ using UnityEngine;
 public class BandageSnap : MonoBehaviour
 {
     private Renderer Rend;
+    private Collider Collide;
     [SerializeField]
     private DeathCounter deathCounter;
     [SerializeField]
@@ -15,6 +16,7 @@ public class BandageSnap : MonoBehaviour
     void Start()
     {
         Rend = GetComponent<Renderer>();
+        Collide = GetComponent<Collider>();
         
     }
    
@@ -27,6 +29,7 @@ public class BandageSnap : MonoBehaviour
             Destroy(col.gameObject);
             deathCounter.AddTime(timesafe);
             score.AddScore(15);
+            Collide.isTrigger = false;
         } 
     }
     

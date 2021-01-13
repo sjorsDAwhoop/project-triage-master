@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 9067388650314592791}
   - component: {fileID: -4439562084012699129}
   - component: {fileID: 247808050981071319}
+  - component: {fileID: 7719680268331647532}
   m_Layer: 0
-  m_Name: verband
+  m_Name: PR_Bandage
   m_TagString: verband
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -219,4 +220,17 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.05217476, y: 0.024461312, z: 0.10541587}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &7719680268331647532
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760864324486179393}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.052707937
   m_Center: {x: 0, y: 0, z: 0}
