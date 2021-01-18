@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6678248187140746108}
   - component: {fileID: 6678248187140746099}
   m_Layer: 0
-  m_Name: chestsealsnap
-  m_TagString: chestseal
+  m_Name: PR_ChestSealSnap
+  m_TagString: CCeal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

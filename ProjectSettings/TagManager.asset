@@ -6,8 +6,11 @@ TagManager:
   tags:
   - projectile
   - FxTemporaire
-  - chestseal
-  - verband
+  - Tourn
+  - CCeal
+  - Bandage
+  - Ars
+  - Marker
   layers:
   - Default
   - TransparentFX

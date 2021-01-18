@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4288384748547433602}
   - component: {fileID: 4288384748547433605}
   m_Layer: 0
-  m_Name: PR_MARKER
+  m_Name: PR_Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

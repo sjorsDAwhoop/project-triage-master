@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3183302708608364308}
   - component: {fileID: 168074704259935641}
   m_Layer: 0
-  m_Name: verband prop
-  m_TagString: Untagged
+  m_Name: PR_BandagePlug
+  m_TagString: Bandage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

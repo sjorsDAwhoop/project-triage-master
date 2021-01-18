@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2150381996560107480}
   - component: {fileID: 296783754887540801}
   m_Layer: 0
-  m_Name: verbandpropsnap
-  m_TagString: verband
+  m_Name: PR_BandagePlugSnap
+  m_TagString: Bandage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1695076119268661023}
   - component: {fileID: 4952437679863786470}
   m_Layer: 0
-  m_Name: ars pen
+  m_Name: PR_ArsPen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1972757517042355756}
   m_Layer: 0
   m_Name: PR_ChestSeal
-  m_TagString: chestseal
+  m_TagString: CCeal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
