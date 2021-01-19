@@ -23,7 +23,7 @@ public class BandageSnap : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("verband"))
+        if (col.CompareTag("Bandage"))
         {
             Rend.enabled = true;
             Destroy(col.gameObject);

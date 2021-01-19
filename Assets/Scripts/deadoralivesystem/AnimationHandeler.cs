@@ -29,4 +29,9 @@ public class AnimationHandeler : MonoBehaviour
     {
         anim.Play("Base Layer.breathless", 0, 0);
     }
+    
+    public void roll()
+    {
+        anim.SetTrigger("isrolling");
+    }
 }

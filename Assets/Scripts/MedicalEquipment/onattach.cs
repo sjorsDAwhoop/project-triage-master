@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class onattach : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    public void Function()
+    [SerializeField]
+    private AnimationHandeler handeler;
+    
+    public void grabshoulder()
     {
-        Debug.Log("hi there");
+        handeler.roll();
     }
 
 }

@@ -22,7 +22,7 @@ public class ChestSealSnap : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("chestseal"))
+        if (col.CompareTag("CCeal"))
         {
             Rend.enabled = true;
             Destroy(col.gameObject);
