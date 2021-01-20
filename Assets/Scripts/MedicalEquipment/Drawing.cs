@@ -4,47 +4,36 @@ using UnityEngine;
 
 public class Drawing : MonoBehaviour
 {
-    private int Size = 10;
-    public GameObject marker;
-
+    [SerializeField]
+    private GameObject decalprefab;
+    [SerializeField]
+    private bool candraw;
     void Update()
     {
        
-        Vector3 markerRange = transform.TransformDirection(Vector3.forward) ;
+        Vector3 markerRange = transform.TransformDirection(Vector3.right) ;
         RaycastHit hit;
 
-        //draws pixels on texture with mesh collider
+       
 
-        if (Physics.Raycast(transform.position, markerRange ,out hit, 0.1f))
+        if (Physics.Raycast(transform.position, markerRange, out hit, 0.1f) && candraw == true)
         {
-            Renderer rend = hit.transform.GetComponent<Renderer>();
-            MeshCollider meshCollider = hit.collider as MeshCollider;
 
-            Texture2D tex = rend.material.mainTexture as Texture2D;
-            Vector2 pixelUV = hit.textureCoord;
-            pixelUV.x *= tex.width;
-            pixelUV.y *= tex.height;
-
-            //multiplies pixelsize by 10
-
-            for (int i = 0; i < Size; i++)
-            {
-                int x = (int)pixelUV.x;
-                int y = (int)pixelUV.y;
-
-                
-                 y += i;
-                 x += i;
-
-                //Apply
-                tex.SetPixel(x, y, Color.red);
-
-            }
-            tex.Apply();
+            SpawnDecal(hit);
+            candraw = false;
         }
-        //shows range for marker
-        Debug.DrawRay(transform.position, markerRange, Color.blue);
+        
+        if(hit.collider == null)
+        {
+            candraw = true;
+        }
     }
     
+    private void SpawnDecal(RaycastHit hit)
+    {
+        var decal = Instantiate(decalprefab);
+        decal.transform.position = hit.point;
+        decal.transform.forward = hit.normal * -1f;
+    }
 }
 
