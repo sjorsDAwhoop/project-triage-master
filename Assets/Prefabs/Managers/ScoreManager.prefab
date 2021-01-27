@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: 0
+  NumberOfBandages: 0
+  NumberOfChestseal: 0

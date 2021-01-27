@@ -5,12 +5,19 @@ using UnityEngine;
 public class ScoreSystem : MonoBehaviour
 {
     [SerializeField]
-    private int Score;
+    private int NumberOfBandages;
+    [SerializeField]
+    private int NumberOfChestseal;
 
-    public void AddScore(int AddingScore)
+    public void Addbandage(int AddingBandage)
     {
-        Score += AddingScore;
-        Debug.Log("called");
+        NumberOfBandages += AddingBandage;
+        Debug.Log("bandage added");
+    }
+    public void AddChestSeal (int AddingChestSeal)
+    {
+        NumberOfChestseal += AddingChestSeal;
+        Debug.Log("CCeal added");
     }
 
 

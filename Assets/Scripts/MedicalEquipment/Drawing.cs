@@ -21,6 +21,11 @@ public class Drawing : MonoBehaviour
 
             SpawnDecal(hit);
             candraw = false;
+            checkTMark otherScript = hit.collider.gameObject.GetComponent<checkTMark>();
+            if (otherScript != null)
+            {
+                otherScript.Test();
+            }
         }
         
         if(hit.collider == null)

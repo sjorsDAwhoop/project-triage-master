@@ -110,3 +110,4 @@ MonoBehaviour:
   deathCounter: {fileID: 0}
   score: {fileID: 0}
   timesafe: 0
+  bandage: {fileID: 0}

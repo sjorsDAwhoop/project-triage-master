@@ -11,6 +11,7 @@ TagManager:
   - Bandage
   - Ars
   - Marker
+  - Victim
   layers:
   - Default
   - TransparentFX

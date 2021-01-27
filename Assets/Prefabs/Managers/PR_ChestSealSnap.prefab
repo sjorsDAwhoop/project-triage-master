@@ -112,3 +112,4 @@ MonoBehaviour:
   deathCounter: {fileID: 0}
   score: {fileID: 0}
   timesafe: 100
+  chestSeal: {fileID: 0}

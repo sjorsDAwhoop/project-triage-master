@@ -9,9 +9,9 @@ public class BandageSnap : MonoBehaviour
     [SerializeField]
     private DeathCounter deathCounter;
     [SerializeField]
-    private ScoreSystem score;
-    [SerializeField]
     private float timesafe;
+    [SerializeField]
+    private ScoreSystem bandage;
 
     void Start()
     {
@@ -27,9 +27,9 @@ public class BandageSnap : MonoBehaviour
         {
             Rend.enabled = true;
             Destroy(col.gameObject);
+            bandage.Addbandage(1);
+            GetComponent<Collider>().enabled = false;
             deathCounter.AddTime(timesafe);
-            score.AddScore(15);
-            Collide.isTrigger = false;
         } 
     }
     
