@@ -7,12 +7,7 @@ public class checkTMark : MonoBehaviour
     
     void Start()
     {
-        
-    }
-
-    public void Test()
-    {
-        Debug.Log(gameObject + "T mark registered");
+      
     }
 
 

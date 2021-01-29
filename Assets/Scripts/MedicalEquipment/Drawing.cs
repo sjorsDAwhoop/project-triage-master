@@ -21,10 +21,11 @@ public class Drawing : MonoBehaviour
 
             SpawnDecal(hit);
             candraw = false;
-            checkTMark otherScript = hit.collider.gameObject.GetComponent<checkTMark>();
-            if (otherScript != null)
+            checkTMark CheckT = hit.collider.gameObject.GetComponent<checkTMark>();
+            if (CheckT != null)
             {
-                otherScript.Test();
+                Check(hit);
+                Debug.Log(hit.transform.name);
             }
         }
         
@@ -39,6 +40,10 @@ public class Drawing : MonoBehaviour
         var decal = Instantiate(decalprefab);
         decal.transform.position = hit.point;
         decal.transform.forward = hit.normal * -1f;
+    }
+    public void Check(RaycastHit hit)
+    {
+        Debug.Log(hit.transform.name + " T mark registered hit by " + transform.name);
     }
 }
 

@@ -31,7 +31,7 @@ public class AnimationHandeler : MonoBehaviour
     }
     
     public void roll()
-    {
+    {      
         anim.SetTrigger("isrolling");
     }
 }
