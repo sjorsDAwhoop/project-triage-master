@@ -14,8 +14,12 @@ public class Tomi : MonoBehaviour
     public GameObject target;
     public GameObject Base;
 
+    public GameObject ThisTourniquet;
+
     public GameObject HandR;
     public GameObject HandL;
+
+    public GameObject RoundTourniquet;
 
     private Vector3 targetTran;
 
@@ -32,9 +36,9 @@ public class Tomi : MonoBehaviour
     {
         target = GameObject.FindWithTag("BlownOffPart");
         targetTran = target.transform.position;
-        Base = GameObject.Find("TomTurn");
-        HandR = GameObject.Find("RightHand");
-        HandL = GameObject.Find("LeftHand");
+        Base = GameObject.FindWithTag("TomTurn");
+        
+        
     }
 
     void Update()
@@ -50,6 +54,15 @@ public class Tomi : MonoBehaviour
             Destroy(GetComponent<Rigidbody>());
             transform.SetParent(target.transform);
             Base.transform.parent = null;
+
+            MeshRenderer m = ThisTourniquet.GetComponent<MeshRenderer>();
+            m.enabled = false;
+
+           
+            Instantiate(RoundTourniquet);
+
+            RoundTourniquet.transform.position = target.transform.position;
+            RoundTourniquet.transform.rotation = target.transform.rotation;
 
             CanSpin = true;
         }

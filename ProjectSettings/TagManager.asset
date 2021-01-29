@@ -12,6 +12,25 @@ TagManager:
   - Ars
   - Marker
   - Victim
+  - BACKBUTTON
+  - s3
+  - s1
+  - ButtonCreditScreenOPTIONON
+  - ExitScreen
+  - ButtonLevelScreen
+  - ButtonExitGame
+  - s6
+  - s5
+  - s2
+  - CreditScreen
+  - StartLevel
+  - OptionScreenButton
+  - s4
+  - ButtonCreditScreenOPTIONSCEENOFF
+  - TomTurn
+  - BlownOffPart
+  - ChestPart
+  - Shinook
   layers:
   - Default
   - TransparentFX
