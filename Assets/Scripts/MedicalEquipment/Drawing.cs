@@ -44,6 +44,10 @@ public class Drawing : MonoBehaviour
     public void Check(RaycastHit hit)
     {
         Debug.Log(hit.transform.name + " T mark registered hit by " + transform.name);
+        if(transform.name == "PR_RedMarker")
+        {
+            print("done");
+        }
     }
 }
 
