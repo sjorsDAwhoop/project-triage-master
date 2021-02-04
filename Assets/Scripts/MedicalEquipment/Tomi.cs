@@ -43,7 +43,7 @@ public class Tomi : MonoBehaviour
 
     void Update()
     {
-        spinY = Base.transform.rotation.eulerAngles.y;
+      //  spinY = Base.transform.rotation.eulerAngles.y;
 
         if (Vector3.Distance(transform.position, targetTran) < maxRange && !CanSpin && !SpinStopped)
         {
