@@ -9,7 +9,7 @@ public class Drawing : MonoBehaviour
     [SerializeField]
     private bool candraw;
     [SerializeField]
-    private ResultsScreen result;
+    private results result;
     void Update()
     {
        
