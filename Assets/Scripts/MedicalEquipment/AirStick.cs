@@ -28,7 +28,7 @@ public class AirStick : MonoBehaviour
 
     void Start()
     {
-        ChestTarget = GameObject.FindWithTag("ChestTarget");
+        
     }
 
 
@@ -67,29 +67,19 @@ public class AirStick : MonoBehaviour
                 Destroy(Stick.GetComponent<Rigidbody>());
                 Destroy(Stick.GetComponent<BoxCollider>());
 
-                Pull.AddComponent<Rigidbody>();
-                Pull.AddComponent<Interactable>();
-                Pull.AddComponent<Throwable>();
-                Pull.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-                Pull.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
 
+                Pull.AddComponent<Interactable>();
+
+             
                 eiei = true;
             }
 
 
-            if (eiei == true && Pull.transform.position.y >= ChestTarget.transform.position.y + 0.22f)
+            if (eiei == true && Pull.transform.position.y >= ChestTarget.transform.position.y + 0.15f)
             {
-                Pull.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-                Destroy(Pull.GetComponent<Throwable>());
-                Destroy(Pull.GetComponent<Interactable>());
-                Destroy(Pull.GetComponent<BoxCollider>());
-                Destroy(Pull.GetComponent<Rigidbody>());
                 Pull.AddComponent<BoxCollider>();
                 Pull.AddComponent<Rigidbody>();
-                Pull.AddComponent<Interactable>();
                 Pull.AddComponent<Throwable>();
-
-
                 StickDone = true;
             }
         }

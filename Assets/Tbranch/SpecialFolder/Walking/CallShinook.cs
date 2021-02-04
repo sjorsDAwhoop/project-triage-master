@@ -29,6 +29,7 @@ public class CallShinook : MonoBehaviour
     private bool yes = false;
     private bool LichtKnipper = true;
 
+    public bool DeveloperYes = false;
 
 
     public bool HETEINDEBEGINT = false;
@@ -46,10 +47,10 @@ public class CallShinook : MonoBehaviour
         if (HETEINDEBEGINT == true)
         {
             
-            if (Vector3.Distance(Hand.transform.position, Radio.transform.position) <= CloseTo && yes == false)
+            if (Vector3.Distance(Hand.transform.position, Radio.transform.position) <= CloseTo || DeveloperYes == true  && yes == false)
             {
                 Shinook.GetComponent<AudioSource>().enabled = true;
-               // Shinook.GetComponent<MeshRenderer>().enabled = true;
+                Shinook.GetComponent<MeshRenderer>().enabled = true;
                 // Instantiate(ShinookBody, Shinookspawn.transform.position, Shinook.transform.rotation);
                 rb = Shinook.GetComponent<Rigidbody>();
                 yes = true;

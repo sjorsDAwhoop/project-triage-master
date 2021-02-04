@@ -31,7 +31,6 @@ TagManager:
   - BlownOffPart
   - ChestPart
   - Shinook
-  - ChestTarget
   layers:
   - Default
   - TransparentFX

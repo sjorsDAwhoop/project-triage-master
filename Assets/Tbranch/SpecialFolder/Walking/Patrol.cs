@@ -51,7 +51,7 @@ public class Patrol : MonoBehaviour
       //      i++;
      //       
       //  }
-        if(i == 6)
+        if(i == 4)
         {
             i = 0;
         }
