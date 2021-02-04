@@ -8,6 +8,8 @@ public class Drawing : MonoBehaviour
     private GameObject decalprefab;
     [SerializeField]
     private bool candraw;
+    [SerializeField]
+    private ResultsScreen result;
     void Update()
     {
        
@@ -18,14 +20,12 @@ public class Drawing : MonoBehaviour
 
         if (Physics.Raycast(transform.position, markerRange, out hit, 0.1f) && candraw == true)
         {
-
             SpawnDecal(hit);
             candraw = false;
-            checkTMark CheckT = hit.collider.gameObject.GetComponent<checkTMark>();
+            checkTMark CheckT = hit.collider.gameObject.transform.root.GetComponent<checkTMark>();
             if (CheckT != null)
             {
                 Check(hit);
-                Debug.Log(hit.transform.name);
             }
         }
         
@@ -43,10 +43,10 @@ public class Drawing : MonoBehaviour
     }
     public void Check(RaycastHit hit)
     {
-        Debug.Log(hit.transform.name + " T mark registered hit by " + transform.name);
+        Debug.Log(hit.transform.root + " T mark registered hit by " + transform.name);
         if(transform.name == "PR_RedMarker")
         {
-            print("done");
+            result.TRedMarkText(hit);
         }
     }
 }
