@@ -1,18 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class results : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Text writetext;
+    public void TRedMarkText(RaycastHit hit)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        writetext.text = hit.transform.root + "has been marked by T1mark ";
     }
 }
